@@ -38,13 +38,15 @@ img {
     width: 2.5rem;
 }
 
+/* user */
+
 .user {
     display: grid;
     grid-template-columns:.1fr 1fr;
     grid-gap: 0 .5rem;
     padding: 1rem 0;
 }
-
+/* font */
 .user h1 {
     font-size: 1rem;
     color: var(--White);
@@ -63,6 +65,12 @@ section > p {
     margin-top: 1.5rem;
     color: var(--Light-gray);
 }
+
+:is(.kira ,.jeanette) h1,
+:is(.kira,.jeanette) h2 {
+    color: var(--Very-dark-grayish-blue);
+}
+/* box*/
 .daniel {
     background: url(/images/bg-pattern-quotation.svg)  no-repeat;
     background-color: var(--Moderate-violet);
@@ -80,12 +88,6 @@ section > p {
     background-color: var(--white-bg);
 }
 
-:is(.kira ,.jeanette) h1,
-:is(.kira,.jeanette) h2 {
-    color: var(--Very-dark-grayish-blue);
-}
-
-
 .jeanette {
     width: 100%;
     background-color: var(--white-bg);
@@ -97,6 +99,7 @@ section > p {
 }
 
 @media only screen and (max-width: 975px) {
+    
     main {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
