@@ -1,0 +1,115 @@
+:root{
+
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --white-bg: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Light-grayish-blue);
+    padding: 4rem;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+section {
+    height: auto;
+    width: 100%;
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+img {
+    border-radius: 100%;
+    grid-row: span 2;
+    width: 2.5rem;
+}
+
+.user {
+    display: grid;
+    grid-template-columns:.1fr 1fr;
+    grid-gap: 0 .5rem;
+    padding: 1rem 0;
+}
+
+.user h1 {
+    font-size: 1rem;
+    color: var(--White);
+}
+
+.user  p {
+    font-size: 1rem;
+    color: var(--Light-gray);
+}
+
+section h2 {
+    font-size: 1.2rem;
+    color: var(--White);
+}
+section > p {
+    margin-top: 1.5rem;
+    color: var(--Light-gray);
+}
+.daniel {
+    background: url(/images/bg-pattern-quotation.svg)  no-repeat;
+    background-color: var(--Moderate-violet);
+    background-position: right 10vh top 0;
+    grid-column: span 2;
+}
+
+.jonathan {
+    width: 100%;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.kira {
+    grid-row: span 3;
+    background-color: var(--white-bg);
+}
+
+:is(.kira ,.jeanette) h1,
+:is(.kira,.jeanette) h2 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+.jeanette {
+    width: 100%;
+    background-color: var(--white-bg);
+}
+
+.patrick {
+    grid-column: span 2;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+@media only screen and (max-width: 975px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .kira {
+        grid-row: span 1;
+    }
+    .patrick {
+        grid-column: span 1;
+    }
+
+    .daniel {
+        grid-column: span 1;
+    }
+}
